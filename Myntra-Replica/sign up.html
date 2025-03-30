@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Register</title>
+    <link rel="stylesheet" href="sign up.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Create Account</h1>
+            <div class="social-container">
+                <a href="https://www.facebook.com/" class="social"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.google.co.in/" class="social"><i class="fab fa-google-plus-g"></i></a>
+                <a href="https://www.linkedin.com/feed/" class="social"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <span>or use your email for registration</span>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button>Sign Up</button>
+            </form>           
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h1>Sign In</h1>
+            <div class="social-container">
+                <a href="https://www.facebook.com/" class="social"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.google.co.in/" class="social"><i class="fab fa-google-plus-g"></i></a>
+                <a href="https://www.linkedin.com/feed/" class="social"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <span>or use your account</span>
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button>Sign In</button>
+            </form>       
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome To MYNTRA</h1>
+                    <p>Please give comments and rating for our products</p>
+                    <button class="press" id="SignIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>MYNTRA Products</h1>
+                    <p>Advanced Quality and Trending Collections</p>
+                    <button class="press" id="SignUp">Sign In</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const SignUpButton = document.getElementById("SignUp");
+        const SignInButton = document.getElementById("SignIn");
+        const container = document.getElementById("container");
+
+        SignUpButton.addEventListener('click',()=>{
+            container.classList.add("right-panel-active");
+        })
+        SignInButton.addEventListener('click',()=>{
+            container.classList.remove("right-panel-active");
+        })
+        
+    </script>
+</body>
+</html>
